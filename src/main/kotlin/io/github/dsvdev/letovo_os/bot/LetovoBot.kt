@@ -37,7 +37,7 @@ class LetovoBot(
         val participant = campParticipantService.getByTelegramId(update.message.from.id.toString())
         if (update.message.text == "Выход") {
             campParticipantService.unregister(update.message.from.id.toString())
-            this.text = "Вы успешно вышли\nДля повторного входа ввыедите код регистрации"
+            this.text = "Вы успешно вышли\nДля повторного входа введите код регистрации"
             this.replyMarkup = keyboard(listOf("Узнать больше"))
             return
         }
