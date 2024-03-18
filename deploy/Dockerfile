@@ -5,7 +5,7 @@ RUN gradle build --no-daemon
 
 FROM openjdk:23
 
-EXPOSE 8080
+EXPOSE 80
 
 RUN mkdir /app
 
