@@ -13,7 +13,7 @@ class RegistrationProcessor(
 
     private val keyboard = UserState.REGISTRATION.keyboard
     private val unknownCommandAnswer = BotAnswer(
-        message = "Неизвестная команда.\nПожалуйста, пользуйтесь кнопками",
+        message = "Код доступа неверен или данный пользователь уже зарегистрирован.\n\nЧтобы вернуться в основное меню нажмите *Назад*",
         keyboard = keyboard
     )
     override fun process(update: Update): BotAnswer {

@@ -32,7 +32,7 @@ class MainProcessor(
     private fun personalInfo(participant: CampParticipant) : BotAnswer {
         val text = StringBuilder()
             .append("${participant.name} ${participant.surname}\n\n")
-            .append("Департамент: ${participant.department}\n")
+            .append("Департамент: ${participant.department}\n\n")
             .append("Комната: ${participant.room}\n\n")
             .append("Рейтинг: 100500")
             .toString()
