@@ -1,6 +1,7 @@
-package io.github.dsvdev.letovo_os.processor
+package io.github.dsvdev.letovo_os.processor.message.impl
 
 import io.github.dsvdev.letovo_os.model.UserState
+import io.github.dsvdev.letovo_os.processor.message.Processor
 import org.springframework.stereotype.Service
 
 @Service

@@ -1,9 +1,10 @@
-package io.github.dsvdev.letovo_os.processor
+package io.github.dsvdev.letovo_os.processor.message.impl
 
 import io.github.dsvdev.letovo_os.model.BotAnswer
 import io.github.dsvdev.letovo_os.model.UserState
+import io.github.dsvdev.letovo_os.processor.message.Processor
 import org.springframework.stereotype.Component
-import org.telegram.telegrambots.meta.api.objects.Update
+import org.telegram.telegrambots.meta.api.objects.Message
 
 @Component
 class UnregisterProcessor : Processor {
@@ -13,12 +14,10 @@ class UnregisterProcessor : Processor {
         message = "Неизвестная команда.\nПожалуйста, пользуйтесь кнопками",
         keyboard = keyboard
     )
-    override fun process(update: Update): BotAnswer {
-        val message = update.message.text
-        message?: return unknownCommandAnswer
+    override fun process(message: Message): BotAnswer {
+        val text = message.text
 
-
-        return when (message.lowercase()) {
+        return when (text.lowercase()) {
             "узнать больше" -> moreInfo()
             "регистрация" -> registration()
             "/start" -> firstMeet()
