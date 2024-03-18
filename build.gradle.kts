@@ -25,6 +25,9 @@ dependencies {
 
 	//telegram
 	implementation("org.telegram:telegrambots:6.9.7.1")
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+	implementation("org.springframework.boot:spring-boot-starter-web:3.2.0")
+
 }
 
 tasks.withType<KotlinCompile> {

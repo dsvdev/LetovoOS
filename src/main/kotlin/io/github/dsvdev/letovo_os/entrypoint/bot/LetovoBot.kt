@@ -1,4 +1,4 @@
-package io.github.dsvdev.letovo_os.bot
+package io.github.dsvdev.letovo_os.entrypoint.bot
 
 import io.github.dsvdev.letovo_os.model.BotAnswer
 import io.github.dsvdev.letovo_os.processor.ProcessorService
@@ -12,7 +12,6 @@ import org.telegram.telegrambots.meta.api.methods.send.SendPhoto
 import org.telegram.telegrambots.meta.api.objects.InputFile
 import org.telegram.telegrambots.meta.api.objects.Update
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboard
-
 
 @Component
 class LetovoBot(
