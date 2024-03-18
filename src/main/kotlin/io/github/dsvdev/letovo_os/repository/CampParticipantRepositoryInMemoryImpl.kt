@@ -12,29 +12,39 @@ class CampParticipantRepositoryInMemoryImpl : CampParticipantRepository {
             surname = "Сахаров",
             isAdmin = false,
             registerCode = "test1",
-            department = "Отдел связи с общественностью",
+            department = "Связи с общественностью",
             room = "42",
             photoUrl = "https://sun1-28.userapi.com/impg/MfJ5qhkhR08z54r2wAQBqZE7vFkD9AL8TCHyRg/77qrZqXuyTw.jpg?size=2560x1707&quality=96&sign=83a30879f274ab39127d83032e7f5fdb&type=album"
         ),
         2L to CampParticipant(
             id = 2,
-            name = "Елизавета",
-            surname = "Степанова",
+            name = "Иван",
+            surname = "Иванов",
             isAdmin = false,
             registerCode = "test2",
             department = "IT департамент",
-            room = "1026",
-            photoUrl = "https://sun9-8.userapi.com/impg/TexQpskkUmY8N685YAYJa3dsXck6AE9c18uD-w/Z3grN54hVVo.jpg?size=804x1080&quality=95&sign=42c2f2be38c149cbac27c55cb190a58a&type=album"
+            room = "11",
+            photoUrl = "https://sun9-58.userapi.com/impg/uKt9DckX_FhRLRQlbKvBN67HsUF6aitS0_TTlA/ljTctHIDodI.jpg?size=325x372&quality=96&sign=096704844e2d1ef72f587a62e003dfea&type=album"
         ),
         3L to CampParticipant(
             id = 3,
-            name = "Администратор",
-            surname = "Администраторов",
-            isAdmin = true,
-            registerCode = "admin1",
-            department = "Управление по управлению всеми управлениями",
-            room = "0",
-            photoUrl = "https://sun9-17.userapi.com/impg/zO1NTB8pgQtWDtrl9lgPOT0zMGhnKDgjiK6zPA/7jKDeBnQUYI.jpg?size=1440x2160&quality=95&sign=b6e911ee41aa36b8c3fb951aa482d0cb&type=album"
+            name = "Петр",
+            surname = "Петров",
+            isAdmin = false,
+            registerCode = "test3",
+            department = "Служба безопасности",
+            room = "22",
+            photoUrl = "https://sun9-55.userapi.com/impg/z7gm7o7tyP0vlueaVfaSOKmdOeYMxaAtisHqDw/3eBVsHTQB-Y.jpg?size=292x341&quality=96&sign=da33009d5f8e1db25d71d6ceac32eac0&type=album"
+        ),
+        4L to CampParticipant(
+            id = 4,
+            name = "Семен",
+            surname = "Семенов",
+            isAdmin = false,
+            registerCode = "test4",
+            department = "Научный",
+            room = "33",
+            photoUrl = "https://sun9-20.userapi.com/impg/kpsuifSFS5yjUTajlRbREVZMQC94uSUoZmS7uw/I5sCej1zOmY.jpg?size=309x389&quality=96&sign=767d65130dc0b8cfbe8bec7965dc0dc7&type=album"
         ),
 
         )
