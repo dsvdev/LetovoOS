@@ -19,6 +19,7 @@ class CampParticipantServiceImpl(
 
     override fun register(code: String, id: String, chatId: String) : Boolean {
         val participant = campParticipantRepository.getByRegisterCode(code) ?: return false
+        if (participant.isRegister) return false
         participant.isRegister = true
         participant.telegramId = id
         participant.chatId = chatId

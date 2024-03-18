@@ -5,8 +5,8 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class CampParticipantRepositoryInMemoryImpl : CampParticipantRepository {
-    private val participants: MutableList<CampParticipant> = mutableListOf(
-        CampParticipant(
+    private val participants: MutableMap<Long, CampParticipant> = mutableMapOf(
+        1L to CampParticipant(
             id = 1,
             name = "Александр",
             surname = "Сахаров",
@@ -16,7 +16,7 @@ class CampParticipantRepositoryInMemoryImpl : CampParticipantRepository {
             room = "42",
             photoUrl = "https://sun1-28.userapi.com/impg/MfJ5qhkhR08z54r2wAQBqZE7vFkD9AL8TCHyRg/77qrZqXuyTw.jpg?size=2560x1707&quality=96&sign=83a30879f274ab39127d83032e7f5fdb&type=album"
         ),
-        CampParticipant(
+        2L to CampParticipant(
             id = 2,
             name = "Елизавета",
             surname = "Степанова",
@@ -26,7 +26,7 @@ class CampParticipantRepositoryInMemoryImpl : CampParticipantRepository {
             room = "1026",
             photoUrl = "https://sun9-8.userapi.com/impg/TexQpskkUmY8N685YAYJa3dsXck6AE9c18uD-w/Z3grN54hVVo.jpg?size=804x1080&quality=95&sign=42c2f2be38c149cbac27c55cb190a58a&type=album"
         ),
-        CampParticipant(
+        3L to CampParticipant(
             id = 3,
             name = "Администратор",
             surname = "Администраторов",
@@ -40,29 +40,21 @@ class CampParticipantRepositoryInMemoryImpl : CampParticipantRepository {
         )
 
     override fun getByTelegramId(id: String): CampParticipant? {
-        participants.forEach { participant ->
+        participants.values.forEach { participant ->
             if (participant.telegramId == id) return participant
         }
         return null
     }
 
     override fun getByRegisterCode(code: String): CampParticipant? {
-        participants.forEach { participant ->
+        participants.values.forEach { participant ->
             if (participant.registerCode == code) return participant
         }
         return null
     }
 
     override fun save(participant: CampParticipant) {
-        var currentIndex = -1
-        participants.forEachIndexed { i, current ->
-            if (current.id == participant.id) currentIndex = i
-        }
-        if (currentIndex == -1) {
-            participants.add(participant)
-        } else {
-            participants[currentIndex] = participant.copy()
-        }
+        participants[participant.id] = participant
     }
 
 
